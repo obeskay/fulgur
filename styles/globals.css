@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .clickable{
+    @apply cursor-pointer hover:scale-110
+  }
+
+  h1, h2{
+    @apply text-2xl font-bold md:text-3xl;
+  }
+
+  h3, h4{
+    @apply text-xl font-bold md:text-2xl;
+  }
+  h5, h6{
+    @apply text-lg font-bold md:text-xl;
+  }
+  
+  .text-bright{
+    @apply text-gray-700 dark:text-light;
+  }
+
+  /* --- Scrollbar --- */
+  /* width */
+  ::-webkit-scrollbar {
+    @apply hidden w-3 h-3 md:block ;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    @apply bg-light dark:bg-gray-700;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    @apply transition-all rounded shadow bg-gray-300/50 hover:bg-gray-300 dark:bg-gray-500 dark:hover:bg-gray-300/20;
+  }
+  /* --- End of Scrollbar --- */
+}
+
+.swiper-slide-thumb-active{
+  @apply opacity-100;
+}
+
+
+@layer components{
+  .btn{
+    @apply relative px-8 py-4 font-bold rounded text-light;
+  }
+  .card{
+    @apply p-4 py-6 rounded shadow bg-light dark:bg-gray-700;
+  }
+  
+}
